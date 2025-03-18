@@ -1,0 +1,8 @@
+{
+    "argparse": "v3.2",
+    "fmt": "11.1.4",
+    "boost": "boost-1.87.0",
+    "nanoflann": "v1.7.1",
+    "nlohmann": "v3.11.3",
+    "CGAL": "v6.0.1"
+}

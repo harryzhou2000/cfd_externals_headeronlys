@@ -13,3 +13,6 @@
 [submodule "nlohmann"]
 	path = nlohmann
 	url = https://github.com/nlohmann/json
+[submodule "CGAL"]
+	path = CGAL
+	url = https://github.com/CGAL/cgal
