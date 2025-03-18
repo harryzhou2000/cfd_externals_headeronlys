@@ -16,3 +16,21 @@
 [submodule "CGAL"]
 	path = CGAL
 	url = https://github.com/CGAL/cgal
+[submodule "cppcodec"]
+	path = cppcodec
+	url = https://github.com/tplgy/cppcodec
+[submodule "cpptrace"]
+	path = cpptrace
+	url = https://github.com/jeremy-rifkin/cpptrace
+[submodule "doxygen-awesome-css"]
+	path = doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "exprtk"]
+	path = exprtk
+	url = https://github.com/ArashPartow/exprtk
+[submodule "pybind11"]
+	path = pybind11
+	url = https://github.com/pybind/pybind11

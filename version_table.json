@@ -1,8 +1,14 @@
 {
-    "argparse": "v3.2",
-    "fmt": "11.1.4",
-    "boost": "boost-1.87.0",
-    "nanoflann": "v1.7.1",
-    "nlohmann": "v3.11.3",
-    "CGAL": "v6.0.1"
+    "argparse": "tag:v3.2",
+    "boost": "tag:boost-1.87.0",
+    "cppcodec": "tag:v0.2",
+    "cpptrace": "tag:v0.8.2",
+    "CGAL": "tag:v6.0.1",
+    "eigen": "67eeba6e720c5745abc77ae6c92ce0a44aa7b7ae",
+    "exprtk": "a4b17d543f072d2e3ba564e4bc5c3a0d2b05c338",
+    "fmt": "tag:11.1.4",
+    "nanoflann": "tag:v1.7.1",
+    "nlohmann": "tag:v3.11.3",
+    "pybind11": "tag:v2.13.6",
+    "doxygen-awesome-css": "tag:v2.3.4"
 }
