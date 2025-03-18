@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.cu": "cpp",
+        "*.f90": "FortranFreeForm",
+        "*.hypara": "csharp",
+        "*config*.json": "jsonc",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "string_view": "cpp",
+        "chrono": "cpp"
+    }
+}
