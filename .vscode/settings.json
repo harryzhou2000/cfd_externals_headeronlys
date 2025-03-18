@@ -7,6 +7,13 @@
         "algorithm": "cpp",
         "functional": "cpp",
         "string_view": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "array": "cpp",
+        "cstddef": "cpp",
+        "iterator": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "vector": "cpp",
+        "any": "cpp"
     }
 }

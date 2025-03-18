@@ -1,10 +1,10 @@
 {
     "argparse": "tag:v3.2",
     "boost": "tag:boost-1.87.0",
+    "CGAL": "tag:v6.0.1",
     "cppcodec": "tag:v0.2",
     "cpptrace": "tag:v0.8.2",
-    "CGAL": "tag:v6.0.1",
-    "eigen": "67eeba6e720c5745abc77ae6c92ce0a44aa7b7ae",
+    "eigen": "68f4e58cfacc686583d16cff90361f0b43bc2c1b",
     "exprtk": "a4b17d543f072d2e3ba564e4bc5c3a0d2b05c338",
     "fmt": "tag:11.1.4",
     "nanoflann": "tag:v1.7.1",
