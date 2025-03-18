@@ -1,0 +1,15 @@
+[submodule "fmt"]
+	path = fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "argparse"]
+	path = argparse
+	url = https://github.com/p-ranav/argparse
+[submodule "boost"]
+	path = boost
+	url = https://github.com/boostorg/boost
+[submodule "nanoflann"]
+	path = nanoflann
+	url = https://github.com/jlblancoc/nanoflann
+[submodule "nlohmann"]
+	path = nlohmann
+	url = https://github.com/nlohmann/json
