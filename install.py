@@ -64,7 +64,6 @@ def install_CGAL(mod_path: str, mod_install_path: str, ver: str):
                 os.path.join(mod_install_path, "include", "CGAL"),
                 dirs_exist_ok=True,
             )
-    
 
 
 @record_version_install
@@ -100,10 +99,11 @@ def install_eigen(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_path, "eigen3.pc.in"),
         os.path.join(mod_install_path, "eigen3.pc.in"),
     )
-    shutil.copy(
-        os.path.join(mod_path, "LICENSE"),
-        os.path.join(mod_install_path, "LICENSE"),
-    )
+    for su in ["APACHE", "BSD", "GPL", "LGPL", "MINPACK", "MPL2", "README"]:
+        shutil.copy(
+            os.path.join(mod_path, f"COPYING.{su}"),
+            os.path.join(mod_install_path, f"COPYING.{su}"),
+        )
 
 
 @record_version_install
