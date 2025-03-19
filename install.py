@@ -27,6 +27,10 @@ def install_argparse(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_install_path, "module"),
         dirs_exist_ok=True,
     )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE"),
+        os.path.join(mod_install_path, "LICENSE"),
+    )
 
 
 @record_version_install
@@ -60,6 +64,7 @@ def install_CGAL(mod_path: str, mod_install_path: str, ver: str):
                 os.path.join(mod_install_path, "include", "CGAL"),
                 dirs_exist_ok=True,
             )
+    
 
 
 @record_version_install
@@ -68,6 +73,10 @@ def install_cppcodec(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_path, "cppcodec"),
         os.path.join(mod_install_path, "."),
         dirs_exist_ok=True,
+    )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE"),
+        os.path.join(mod_install_path, "LICENSE"),
     )
 
 
@@ -91,6 +100,10 @@ def install_eigen(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_path, "eigen3.pc.in"),
         os.path.join(mod_install_path, "eigen3.pc.in"),
     )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE"),
+        os.path.join(mod_install_path, "LICENSE"),
+    )
 
 
 @record_version_install
@@ -100,6 +113,10 @@ def install_nanoflann(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_install_path),
         dirs_exist_ok=True,
     )
+    shutil.copy(
+        os.path.join(mod_path, "COPYING"),
+        os.path.join(mod_install_path, "COPYING"),
+    )
 
 
 @record_version_install
@@ -108,6 +125,10 @@ def install_nlohmann(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_path, "include/nlohmann"),
         os.path.join(mod_install_path, "nlohmann"),
         dirs_exist_ok=True,
+    )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE.MIT"),
+        os.path.join(mod_install_path, "LICENSE.MIT"),
     )
 
 
