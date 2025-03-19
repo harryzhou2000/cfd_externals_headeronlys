@@ -36,20 +36,20 @@ jobs:
         run: |
           mkdir -p release
           cp -r install/* release/  # Modify if needed
-          tar -czf release.tar.gz -C release .
-          zip -r release.zip release/
+          tar -czf external_headeronlys.tar.gz -C release .
+          zip -r external_headeronlys.zip release/
 
       - name: Upload tar.gz artifact
         uses: actions/upload-artifact@v4
         with:
           name: packaged-artifact-tar
-          path: release.tar.gz
+          path: external_headeronlys.tar.gz
 
       - name: Upload zip artifact
         uses: actions/upload-artifact@v4
         with:
           name: packaged-artifact-zip
-          path: release.zip
+          path: external_headeronlys.zip
 
   release:
     needs: build
@@ -74,8 +74,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release.tar.gz
-            release.zip
+            external_headeronlys.tar.gz
+            external_headeronlys.zip
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
