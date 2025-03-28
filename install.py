@@ -146,7 +146,7 @@ install_doxygen_awesome_css = install_full_repo
 install_exprtk = install_full_repo
 install_fmt = install_full_repo
 install_pybind11 = install_full_repo
-
+install_pybind11_json = install_full_repo
 
 def install_HO_repo(mod: str, mod_path: str, mod_install_path: str, ver: str):
     # if mod == "argparse":
