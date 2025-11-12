@@ -4,12 +4,12 @@
     "CGAL": "tag:v6.0.1",
     "cppcodec": "tag:v0.2",
     "cpptrace": "tag:v0.8.2",
-    "eigen": "68f4e58cfacc686583d16cff90361f0b43bc2c1b",
+    "eigen": "tag:5.0.1",
     "exprtk": "a4b17d543f072d2e3ba564e4bc5c3a0d2b05c338",
     "fmt": "tag:11.1.4",
     "nanoflann": "tag:v1.7.1",
-    "nlohmann": "tag:v3.11.3",
-    "pybind11": "tag:v2.13.6",
+    "nlohmann": "tag:v3.12.0",
+    "pybind11": "tag:v3.0.1",
     "pybind11_json": "tag:0.2.15",
     "doxygen-awesome-css": "tag:v2.3.4"
 }
