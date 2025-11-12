@@ -7,6 +7,7 @@ def record_version_install(f_install):
         f_install(*args, **kwargs)
         mod_install_path = args[1]
         ver = args[2]
+        os.makedirs(mod_install_path, exist_ok=True)
         with open(
             os.path.join(mod_install_path, "__cfd_externals_version"), "w"
         ) as file:
@@ -99,7 +100,7 @@ def install_eigen(mod_path: str, mod_install_path: str, ver: str):
         os.path.join(mod_path, "eigen3.pc.in"),
         os.path.join(mod_install_path, "eigen3.pc.in"),
     )
-    for su in ["APACHE", "BSD", "GPL", "LGPL", "MINPACK", "MPL2", "README"]:
+    for su in ["APACHE", "BSD", "MINPACK", "MPL2", "README"]:
         shutil.copy(
             os.path.join(mod_path, f"COPYING.{su}"),
             os.path.join(mod_install_path, f"COPYING.{su}"),
@@ -147,6 +148,7 @@ install_exprtk = install_full_repo
 install_fmt = install_full_repo
 install_pybind11 = install_full_repo
 install_pybind11_json = install_full_repo
+
 
 def install_HO_repo(mod: str, mod_path: str, mod_install_path: str, ver: str):
     # if mod == "argparse":
