@@ -121,6 +121,19 @@ def install_nanoflann(mod_path: str, mod_install_path: str, ver: str):
 
 
 @record_version_install
+def install_doctest(mod_path: str, mod_install_path: str, ver: str):
+    shutil.copytree(
+        os.path.join(mod_path, "doctest"),
+        os.path.join(mod_install_path),
+        dirs_exist_ok=True,
+    )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE.txt"),
+        os.path.join(mod_install_path, "LICENSE.txt"),
+    )
+
+
+@record_version_install
 def install_nlohmann(mod_path: str, mod_install_path: str, ver: str):
     shutil.copytree(
         os.path.join(mod_path, "include/nlohmann"),

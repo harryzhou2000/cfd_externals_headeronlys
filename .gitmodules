@@ -37,3 +37,6 @@
 [submodule "pybind11_json"]
 	path = pybind11_json
 	url = https://github.com/pybind/pybind11_json
+[submodule "doctest"]
+	path = doctest
+	url = https://github.com/doctest/doctest

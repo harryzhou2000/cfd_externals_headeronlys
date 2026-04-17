@@ -23,6 +23,7 @@ DNDSR is not planning to heavily rely on Boost in the future.
 | boost               | BSL-1.0 |
 | cppcodec            | MIT     |
 | cpptrace            | MIT     |
+| doctest             | MIT     |
 | doxygen-awesome-css | MIT     |
 | eigen               | MPL 2.0 |
 | exprtk              | MIT     |
