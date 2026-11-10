@@ -32,3 +32,4 @@ DNDSR is not planning to heavily rely on Boost in the future.
 | nlohmann            | MIT     |
 | pybind11            | BSD-3   |
 | pybind11_json       | BSD-3   |
+| spdlog              | MIT     |

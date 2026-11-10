@@ -147,6 +147,19 @@ def install_nlohmann(mod_path: str, mod_install_path: str, ver: str):
 
 
 @record_version_install
+def install_spdlog(mod_path: str, mod_install_path: str, ver: str):
+    shutil.copytree(
+        os.path.join(mod_path, "include/spdlog"),
+        os.path.join(mod_install_path, "include", "spdlog"),
+        dirs_exist_ok=True,
+    )
+    shutil.copy(
+        os.path.join(mod_path, "LICENSE"),
+        os.path.join(mod_install_path, "LICENSE"),
+    )
+
+
+@record_version_install
 def install_full_repo(mod_path: str, mod_install_path: str, ver: str):
     shutil.copytree(
         os.path.join(mod_path),
