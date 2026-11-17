@@ -168,6 +168,25 @@ def install_full_repo(mod_path: str, mod_install_path: str, ver: str):
     )
 
 
+@record_version_install
+def install_cccl(mod_path: str, mod_install_path: str, ver: str):
+    """Extract one coherent libcu++/CUB/Thrust header family, including fpmp.
+
+    Preserve source-relative include roots so existing consumers can select all
+    three together. Do not package benchmarks, tests, Git data or CUDA binaries.
+    """
+    for relative in ("libcudacxx/include", "cub/cub", "thrust/thrust"):
+        shutil.copytree(os.path.join(mod_path, relative),
+                        os.path.join(mod_install_path, relative), dirs_exist_ok=True)
+    for relative in ("LICENSE", "cccl-version.json", "libcudacxx/LICENSE.TXT",
+                     "cub/LICENSE.TXT", "thrust/LICENSE"):
+        source = os.path.join(mod_path, relative)
+        if os.path.isfile(source):
+            destination = os.path.join(mod_install_path, relative)
+            os.makedirs(os.path.dirname(destination), exist_ok=True)
+            shutil.copy(source, destination)
+
+
 install_cpptrace = install_full_repo
 install_doxygen_awesome_css = install_full_repo
 install_exprtk = install_full_repo

@@ -14,11 +14,32 @@ We only use the header-only part for now.
 
 DNDSR is not planning to heavily rely on Boost in the future.
 
+## CCCL (optional CUDA consumers)
+
+The bundle includes a pinned CCCL development snapshot with `cuda/fpmp` for
+experimental float-float arithmetic. It is source headers, not a compiled CUDA
+library, and does not make CPU consumers require a CUDA installation. The exact
+commit is in `version_table.json` and `install/cccl/__cfd_externals_version`.
+
+Select all three include roots from this same installation, before toolkit
+CCCL paths; do not mix header families:
+
+```text
+cccl/libcudacxx/include
+cccl/cub
+cccl/thrust
+```
+
+This extraction supports direct header consumption. It does not include the
+full CCCL build, tests, benchmarks, or its CMake package installation. CUDA
+12.6/13.2 consumer compatibility remains subject to each application's checks.
+
 ## Licenses
 
 | Project             | License |
 | ------------------- | ------- |
 | CGAL                | GPLv3   |
+| CCCL                | Apache-2.0 WITH LLVM-exception (see packaged licenses) |
 | argparse            | MIT     |
 | boost               | BSL-1.0 |
 | cppcodec            | MIT     |

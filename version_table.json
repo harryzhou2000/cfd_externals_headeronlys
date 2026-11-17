@@ -13,5 +13,6 @@
     "pybind11": "tag:v3.0.1",
     "pybind11_json": "tag:0.2.15",
     "spdlog": "tag:v1.17.0",
-    "doxygen-awesome-css": "tag:v2.3.4"
+    "doxygen-awesome-css": "tag:v2.3.4",
+    "cccl": "8d33eb1d2cb113bb41ef8733f10baeddb44b7a2c"
 }

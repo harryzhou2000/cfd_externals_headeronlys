@@ -32,6 +32,9 @@ jobs:
       - name: Run install
         run: python install.py  # Change to your actual script
 
+      - name: Validate extracted dependency contracts
+        run: python -m unittest discover -s tests -v
+
       - name: Package artifact
         run: |
           mkdir -p release

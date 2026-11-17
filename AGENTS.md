@@ -4,7 +4,7 @@ Dependency extraction repo for [DNDSR](https://github.com/harryzhou2000/DNDSR). 
 
 ## Architecture
 
-- **15 git submodules**: third-party C++ libraries (argparse, boost, CGAL, doctest, eigen, fmt, nlohmann json, pybind11, spdlog, etc.)
+- **16 git submodules**: third-party C++ libraries (argparse, boost, CGAL, doctest, eigen, fmt, nlohmann json, pybind11, spdlog, CCCL, etc.)
 - **version_table.json**: pins each submodule to a tag or commit hash
 - **checkout.py**: fetches pinned versions (depth=1) into submodule dirs
 - **install.py**: extracts headers/source to `install/<module>/` using per-module installer functions
@@ -40,6 +40,7 @@ Each library has a custom installer in `install.py` (e.g., `install_argparse`, `
 - **eigen**: copies `Eigen/`, `unsupported/`, license files
 - **argparse, nanoflann, nlohmann**: copy `include/` trees
 - **spdlog**: copies `include/spdlog` and the license (header-only build, bundled fmt included)
+- **cccl**: copies one coherent libcu++/CUB/Thrust header family with source-relative include roots and licenses; no CUDA compilation during packaging
 - **cpptrace, doxygen-awesome-css, exprtk, fmt, pybind11, pybind11_json**: full repo copy
 
 All installers write `__cfd_externals_version` file to track installed version.

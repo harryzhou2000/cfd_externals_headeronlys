@@ -1,3 +1,4 @@
 install
 release
 release*
+__pycache__/
