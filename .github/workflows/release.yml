@@ -38,7 +38,7 @@ jobs:
       - name: Package artifact
         run: |
           mkdir -p release
-          cp -r install/* release/  # Modify if needed
+          rsync -a --exclude=.git install/ release/
           tar -czf external_headeronlys.tar.gz -C release .
           zip -r external_headeronlys.zip release/
 
